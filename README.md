@@ -8,6 +8,8 @@
 
 ### [⬇ تنزيل · Download · Télécharger](https://github.com/nasikh-app/nasikh/releases/latest)
 
+🌐 **[الموقع · Website · Site](https://nasikh-app.github.io/nasikh/)**
+
 Windows 10 / 11 (64-bit)
 
 </div>
