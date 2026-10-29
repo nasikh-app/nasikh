@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل الاستخدام · ناسخ</title>
+<meta name="description" content="دليل استخدام ناسخ خطوة بخطوة · Nasikh user guide · Guide d'utilisation de Nasikh">
+<link rel="icon" type="image/png" href="img/favicon.png" id="favicon">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .g-hero { padding: 48px 0 8px; text-align: center; }
+  .g-hero h1 { margin: 0; font-family: var(--font-display); font-size: clamp(34px, 6vw, 52px); }
+  .g-hero p { margin: 8px auto 0; color: var(--muted); max-width: 640px; }
+  .g-layout { display: grid; grid-template-columns: 230px 1fr; gap: 40px; align-items: start; padding: 32px 0 64px; }
+  .toc { position: sticky; top: 86px; display: flex; flex-direction: column; gap: 2px; font-size: 15px; }
+  .toc b { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .toc a { color: var(--muted); text-decoration: none; padding: 5px 10px; border-radius: 8px; border-inline-start: 2px solid transparent; }
+  .toc a:hover { color: var(--ink); background: var(--surface); }
+  .toc a.on { color: var(--ink); border-inline-start-color: var(--accent); background: var(--surface); font-weight: 600; }
+  article section { padding: 0 0 48px; scroll-margin-top: 86px; }
+  article h2 { text-align: start; font-size: clamp(24px, 3.4vw, 30px); display: flex; align-items: center; gap: 12px; }
+  article h2 .n { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-family: var(--font-body); font-size: 16px; }
+  article .intro { color: var(--muted); margin: 0 0 16px; }
+  article ol, article ul { margin: 0 0 16px; padding-inline-start: 22px; }
+  article li { margin-bottom: 8px; }
+  article li b { color: var(--ink); }
+  article .shot { margin: 8px 0 18px; }
+  article .shot.panel { width: fit-content; max-width: min(100%, 460px); margin-inline: auto; }
+  .tip { padding: 12px 16px; border-radius: 12px; background: var(--teal-soft); font-size: 15.5px; margin: 0 0 12px; }
+  .tip::before { content: "💡 "; }
+  .warn { padding: 12px 16px; border-radius: 12px; background: var(--accent-soft); font-size: 15.5px; margin: 0 0 12px; }
+  .back { display: inline-block; margin-top: 8px; font-size: 15px; }
+  @media (max-width: 860px) { .g-layout { grid-template-columns: 1fr; } .toc { position: static; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./"><img class="mark" src="img/icon.png" alt=""><span data-t="name"></span></a>
+    <nav class="links">
+      <a href="./" data-t="home"></a>
+      <a href="./#install" data-t="download"></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="ar">عربي</button>
+      <button type="button" data-lang="en">English</button>
+      <button type="button" data-lang="fr">Français</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap g-hero">
+    <h1 data-t="title"></h1>
+    <p data-t="lead"></p>
+  </div>
+  <div class="wrap g-layout">
+    <nav class="toc" id="toc" aria-label="Contents"></nav>
+    <article id="guide"></article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span data-t="by"></span> <bdi class="credit" dir="ltr">Rawnd Marzina</bdi></div>
+    <div class="row">
+      <a href="mailto:nasikh.app@gmail.com" dir="ltr">nasikh.app@gmail.com</a>
+      <a href="https://forms.gle/FH2LsjnkosEtTKuNA" data-t="rate"></a>
+      <a href="./" data-t="home"></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  // Each section: [id, title, intro, screenshot (or ""), steps, tips, warnings]
+  var G = {
+    ar: {
+      page: "دليل الاستخدام · ناسخ", name: "ناسخ", home: "الصفحة الرئيسية", download: "تنزيل", toc: "المحتويات",
+      title: "دليل استخدام ناسخ", lead: "كل ما تحتاج معرفته، خطوة بخطوة ومع صور من البرنامج.",
+      by: "فكرة وتطوير:", rate: "قيّم البرنامج", top: "↑ إلى الأعلى",
+      sections: [
+        ["start", "البداية", "تثبيت البرنامج وتجهيزه أول مرة.", "", [
+          "نزّل البرنامج من <a href=\"./\">الصفحة الرئيسية</a> وشغّل الملف، واختر لغة البرنامج.",
+          "إن ظهرت رسالة «Windows protected your PC» فاضغط <b>More info</b> ثم <b>Run anyway</b>.",
+          "عند أول تشغيل تظهر شاشة <b>«تجهيز ناسخ»</b>: ينزّل البرنامج نموذج التفريغ (1.5 غ.ب) مرة واحدة فقط. إن كان في جهازك كرت NVIDIA فاختر أيضاً <b>تسريع بكرت الشاشة</b> (1.4 غ.ب).",
+          "إن انقطع الإنترنت أثناء التنزيل فاضغط «إعادة المحاولة»: يكمل من حيث توقف.",
+          "بعدها تظهر جولة تعريفية قصيرة، ويمكنك إعادتها من الإعدادات ⚙."
+        ], [], []],
+        ["transcribe", "التفريغ", "من التسجيل إلى نص مكتوب.", "transcribe", [
+          "اسحب ملفات الصوت أو الفيديو إلى مربع <b>«اسحب الملفات هنا»</b>، أو اضغط <b>«اختر من الجهاز»</b>. يمكنك إضافة عدة ملفات دفعة واحدة.",
+          "أجزاء المحاضرة الواحدة المرقّمة (مثل «درس 2a» و«درس 2b») تُدمج تلقائياً في محاضرة واحدة.",
+          "اختر <b>لغة التسجيل</b>، أو اتركها «تلقائي» ليكتشفها البرنامج.",
+          "اختر الوضع: <b>«دقيق»</b> هو الأفضل للمحاضرات، و<b>«سريع»</b> أسرع بمرتين بدقة أقل قليلاً.",
+          "اختر صيغ الإخراج: Word، ونص عادي، ونص بتوقيت للفيديو (SRT).",
+          "اضغط <b>«ابدأ التفريغ»</b> وتابع النص وهو يُكتب في «النص المباشر». تقدر توقف التفريغ في أي لحظة."
+        ], [
+          "في خانة <b>«أسماء ومصطلحات»</b> اكتب أسماء الأعلام والمصطلحات التي ترد في المحاضرة، مفصولة بفواصل، فيصحّح البرنامج إملاءها بعد التفريغ.",
+          "مع كرت NVIDIA تُفرَّغ محاضرة ساعة في دقائق؛ على المعالج وحده يأخذ وقتاً أطول."
+        ], []],
+        ["report", "تقرير الجودة", "ملاحظات عن التسجيل والنص تدلّك على ما يستحق المراجعة.", "report", [
+          "افتح تبويب <b>«تقرير الجودة»</b> بعد انتهاء التفريغ.",
+          "كل ملاحظة تذكر توقيتها: استمع إلى ذلك الموضع من تبويب «النص» بالضغط على السطر نفسه.",
+          "إن حذف البرنامج تكراراً لعبارة ثم تبيّن أنها من كلام المحاضر فعلاً، اضغط <b>«استرجاعها: كانت من كلام المحاضر»</b>.",
+          "الملاحظات تشمل: تصحيح الأسماء، والصمت الطويل، والصوت المنخفض، والكلمات غير المؤكدة، والأجزاء التالفة في الملف."
+        ], [], []],
+        ["editor", "الاستماع والتصحيح", "راجع النص وأنت تستمع إلى التسجيل.", "editor", [
+          "افتح المحاضرة من <b>المكتبة</b>، واضغط زر التشغيل ▶. الكلمة المقروءة تتلوّن مع الصوت.",
+          "اضغط أي كلمة لتسمعها من موضعها، واستعمل زرّي 5 ثوانٍ للرجوع والتقدم، وغيّر السرعة من القائمة.",
+          "«تلوين الكلمات غير المؤكدة» يميّز الكلمات التي قد تحتاج تصحيحاً.",
+          "اضغط <b>«تصحيح النص»</b>، ثم اضغط أي سطر وعدّله، ثم <b>«إنهاء التصحيح»</b>.",
+          "بعد التصحيح يظهر شريط «صحّحت النص…»: اضغط <b>«تحديث الملفات»</b> ليحدّث البرنامج ملف Word والنص."
+        ], [], ["إن كنت عدّلت ملف Word بنفسك في Word، لا يكتب البرنامج فوقه حفاظاً على تعديلاتك."]],
+        ["organize", "ترتيب ملف Word بالذكاء الاصطناعي", "يقسّم المحاضرة إلى أقسام بعناوين، دون أن يغيّر كلمة من النص.", "organize", [
+          "افتح تبويب <b>«ترتيب ملف Word»</b> واختر الخيارات: عدد الأقسام ولغة العناوين، وأضف ملاحظة إن أردت.",
+          "اضغط <b>«انسخ البرومبت»</b>.",
+          "افتح <b>محادثة جديدة</b> في Gemini أو ChatGPT أو أي منصة، والصق البرومبت وأرسله.",
+          "انسخ رد المنصة <b>بزر النسخ الذي يظهر فوق الرد</b> (لا تحدّده بالماوس)، والصقه في المربع الثالث.",
+          "يعرض البرنامج الأقسام التي وجدها، وبجانب كل قسم «مطابق» أو «تقريبي».",
+          "اضغط <b>«إنشاء ملف Word مرتّب»</b>: يُسمّى الملف بعنوان المحاضرة، وتذهب النسخة غير المرتّبة إلى سلة المحذوفات."
+        ], [
+          "المنصة تقترح العناوين وأماكن الأقسام فقط؛ النص في ملف Word هو نص التفريغ نفسه، 100%.",
+          "إن ظهرت العناوين بلغة غير لغة المحاضرة، اختر «لغة العناوين» يدوياً وانسخ البرومبت من جديد."
+        ], []],
+        ["translate", "الترجمة", "ترجمة المحاضرة إلى 9 لغات بمساعدة الذكاء الاصطناعي، مع الحفاظ على أقسامها.", "translate", [
+          "افتح تبويب <b>«ترجمة»</b> واختر اللغة من <b>«ترجم إلى»</b>.",
+          "تظهر المحاضرة مقسّمة إلى أجزاء (حوالي ألف كلمة لكل جزء) لأن المنصات المجانية تقطع الأجوبة الطويلة.",
+          "لكل جزء: اضغط <b>«انسخ البرومبت»</b>، والصقه في <b>محادثة جديدة</b>، ثم انسخ الجواب كاملاً بزر النسخ والصقه في مربع الجزء.",
+          "كل جزء تلصقه يُحفظ تلقائياً، فيمكنك الإكمال لاحقاً. زر <b>«مسح»</b> يفرّغ الجزء إن أردت إعادته.",
+          "حين تكتمل الأجزاء اضغط <b>«إنشاء ملف Word المترجم»</b>."
+        ], [
+          "انسخ الجواب <b>كاملاً مع قائمة الأسماء</b> في آخره (بعد @@@): يستعملها البرنامج ليكتب الأسماء بالشكل نفسه في كل الأجزاء، ولا تظهر في ملف Word.",
+          "في «ملاحظة إضافية» يمكنك كتابة طريقة كتابة الأسماء التي تريدها، مثل: «اكتب: كاتدرائية، لوغدونوم».",
+          "استعمل النموذج الأقوى في المنصة (مثل Pro أو Thinking) لترجمة أدق."
+        ], ["إن ظهر تنبيه على جزء (لغة خاطئة، أو ترجمة أقصر بكثير من الأصل، أو عنوان قسم ناقص) فاطلب من المنصة إعادة الترجمة."]],
+        ["library", "المكتبة والبحث", "كل محاضراتك في مكان واحد.", "", [
+          "اضغط <b>«المكتبة»</b> أعلى البرنامج لترى كل المحاضرات المفرّغة.",
+          "اكتب في خانة البحث أي كلمة: تظهر المواضع من كل المحاضرات، واضغط النتيجة لتنتقل إلى اللحظة نفسها.",
+          "زر القلم ✏ يغيّر اسم المحاضرة، وزر × يحذفها من المكتبة (ملفات Word والتسجيل الأصلي لا تُحذف).",
+          "<b>«فتح ملف Word»</b> و<b>«فتح المجلد»</b> و<b>«نسخ النص»</b> أسفل النص."
+        ], [], []],
+        ["settings", "الإعدادات", "زر ⚙ أعلى البرنامج.", "settings", [
+          "<b>اللغة</b>: العربية أو الإنجليزية أو الفرنسية.",
+          "<b>المظهر</b>: تلقائي (حسب ويندوز) أو فاتح أو غامق.",
+          "<b>مكان حفظ الملفات</b>: بجانب التسجيل الأصلي، أو اضغط «اختيار مجلد…» لحفظ كل الملفات الجديدة في مجلد واحد.",
+          "<b>دليل الاستخدام</b> يفتح هذه الصفحة، و<b>جولة تعريفية</b> تعيد الجولة.",
+          "عند صدور إصدار جديد تظهر نقطة على ⚙ وتنبيه «يتوفر إصدار جديد»: اضغط «حدّث الآن». مكتبتك وإعداداتك تبقى كما هي."
+        ], [], []],
+        ["tips", "نصائح لأفضل نتيجة", "", "", [
+          "ضع الهاتف <b>قريباً من المحاضر</b> قدر الإمكان، فالمسافة والضجيج أكثر ما يقلّل الدقة.",
+          "سجّل المحاضرة كاملة في ملف واحد إن أمكن؛ وإن انقسمت فرقّم الأجزاء ليدمجها البرنامج.",
+          "اكتب الأسماء النادرة في «أسماء ومصطلحات» قبل التفريغ.",
+          "راجع المواضع التي يدلّك عليها تقرير الجودة بالاستماع إليها."
+        ], [], []],
+        ["help", "حل المشكلات", "", "", [
+          "<b>التفريغ بطيء جداً</b>: تأكد أن تسريع كرت الشاشة مفعّل (المربع الأخضر أسفل الإعدادات يذكر الكرت). من دونه يعمل البرنامج على المعالج.",
+          "<b>النص بلغة غريبة</b>: اختر لغة التسجيل يدوياً بدل «تلقائي» وأعد التفريغ.",
+          "<b>«تعذّرت قراءة الرد» عند الترتيب</b>: انسخ الرد بزر النسخ في المنصة، لا بتحديده بالماوس.",
+          "<b>لم يُحدَّث ملف Word</b>: أغلق الملف في Word ثم اضغط «تحديث الملفات».",
+          "لأي مشكلة أخرى: <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
+        ], [], []]
+      ]
+    },
+    en: {
+      page: "User guide · Nasikh", name: "Nasikh", home: "Home", download: "Download", toc: "Contents",
+      title: "Nasikh user guide", lead: "Everything you need to know, step by step, with pictures from the program.",
+      by: "Created by", rate: "Rate Nasikh", top: "↑ Back to top",
+      sections: [
+        ["start", "Getting started", "Installing the program and setting it up the first time.", "", [
+          "Download the program from the <a href=\"./\">home page</a>, run the file and choose the program's language.",
+          "If you see “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>.",
+          "On first start the <b>“Setting up Nasikh”</b> screen appears: the program downloads the transcription model (1.5 GB) once. If your computer has an NVIDIA card, also choose <b>Graphics card acceleration</b> (1.4 GB).",
+          "If the internet drops during the download, click “Try again”: it continues where it stopped.",
+          "A short tour follows; you can replay it from the settings ⚙."
+        ], [], []],
+        ["transcribe", "Transcribing", "From a recording to written text.", "transcribe", [
+          "Drop audio or video files onto <b>“Drop files here”</b>, or click <b>“Browse files”</b>. You can add several files at once.",
+          "Numbered parts of one lecture (such as “Lesson 2a” and “Lesson 2b”) are merged into one lecture automatically.",
+          "Choose the <b>recording language</b>, or leave it on “Automatic” for the program to detect it.",
+          "Choose the mode: <b>“Accurate”</b> is best for lectures; <b>“Fast”</b> is twice as fast, slightly less accurate.",
+          "Choose the output formats: Word, plain text and timed text for video (SRT).",
+          "Click <b>“Start transcribing”</b> and watch the text being written in “Live transcript”. You can stop at any moment."
+        ], [
+          "In <b>“Names and terms”</b>, write the names and terms used in the lecture, separated by commas, and the program fixes their spelling after transcription.",
+          "With an NVIDIA card an hour-long lecture takes minutes; on the CPU alone it takes longer."
+        ], []],
+        ["report", "Quality report", "Notes about the recording and the text that show what is worth checking.", "report", [
+          "Open the <b>“Quality report”</b> tab once transcription ends.",
+          "Each note gives its time: listen to that moment in the “Text” tab by clicking the line itself.",
+          "If the program removed a repeated phrase that the speaker really said, click <b>“Put it back: the speaker said it”</b>.",
+          "Notes cover: corrected names, long silences, low volume, uncertain words and damaged parts of the file."
+        ], [], []],
+        ["editor", "Listening and correcting", "Check the text while you listen to the recording.", "editor", [
+          "Open the lecture from the <b>Library</b> and press play ▶. The spoken word lights up as you listen.",
+          "Click any word to hear it from there, use the 5-second buttons to go back and forward, and change the speed from the menu.",
+          "“Highlight uncertain words” marks the words that may need correcting.",
+          "Click <b>“Correct text”</b>, click any line and edit it, then <b>“Done correcting”</b>.",
+          "After corrections a “You corrected the text…” bar appears: click <b>“Update files”</b> so the program updates the Word and text files."
+        ], [], ["If you edited the Word file yourself in Word, the program never writes over it, to keep your changes."]],
+        ["organize", "Organizing the Word file with AI", "Splits the lecture into titled sections without changing a word of the text.", "organize", [
+          "Open the <b>“Organize Word file”</b> tab and choose the options: number of sections and language of the titles, plus a note if you like.",
+          "Click <b>“Copy prompt”</b>.",
+          "Open a <b>new chat</b> in Gemini, ChatGPT or any AI, paste the prompt and send it.",
+          "Copy the AI's answer <b>with the copy button above the answer</b> (don't select it with the mouse) and paste it into the third box.",
+          "The program lists the sections it found, each marked “Matched” or “Approximate”.",
+          "Click <b>“Create organized Word file”</b>: the file is named after the lecture's title, and the unorganized copy goes to the Recycle Bin."
+        ], [
+          "The AI only suggests the titles and where sections start; the text in the Word file is the transcript itself, 100%.",
+          "If the titles come out in another language than the lecture's, set “Heading language” yourself and copy the prompt again."
+        ], []],
+        ["translate", "Translation", "Translating the lecture into 9 languages with AI, keeping its sections.", "translate", [
+          "Open the <b>“Translate”</b> tab and choose the language in <b>“Translate into”</b>.",
+          "The lecture is split into parts (about a thousand words each) because free AI chats cut long answers short.",
+          "For each part: click <b>“Copy prompt”</b>, paste it into a <b>new chat</b>, then copy the whole answer with the copy button and paste it into the part's box.",
+          "Every part you paste is saved automatically, so you can finish later. <b>“Clear”</b> empties a part if you want to redo it.",
+          "When all parts are in, click <b>“Create translated Word file”</b>."
+        ], [
+          "Copy the answer <b>whole, with the list of names</b> at its end (after @@@): the program uses it to spell names the same way in every part, and it does not appear in the Word file.",
+          "In “Extra note” you can write how names should be spelled, for example: “write: cathedral, Lugdunum”.",
+          "Use the strongest model of the AI (such as Pro or Thinking) for a more accurate translation."
+        ], ["If a part shows a warning (wrong language, much shorter than the original, or a missing section title), ask the AI to translate it again."]],
+        ["library", "Library and search", "All your lectures in one place.", "", [
+          "Click <b>“Library”</b> at the top to see every transcribed lecture.",
+          "Type any word in the search box: matches from all lectures appear, and clicking one takes you to that moment.",
+          "The pencil ✏ renames a lecture, and × removes it from the library (the Word files and the original recording are not deleted).",
+          "<b>“Open Word file”</b>, <b>“Open folder”</b> and <b>“Copy text”</b> are below the text."
+        ], [], []],
+        ["settings", "Settings", "The ⚙ button at the top.", "settings", [
+          "<b>Language</b>: Arabic, English or French.",
+          "<b>Appearance</b>: automatic (follows Windows), light or dark.",
+          "<b>Where files are saved</b>: next to the original recording, or click “Choose folder…” to save every new file in one folder.",
+          "<b>User guide</b> opens this page, and <b>Quick tour</b> replays the tour.",
+          "When a new version is out, a dot appears on ⚙ with an “A new version is available” notice: click “Update now”. Your library and settings stay as they are."
+        ], [], []],
+        ["tips", "Tips for the best result", "", "", [
+          "Put the phone <b>close to the speaker</b>: distance and noise are what lower accuracy the most.",
+          "Record the whole lecture in one file if you can; if it is split, number the parts so the program merges them.",
+          "Write rare names in “Names and terms” before transcribing.",
+          "Listen to the places the quality report points to."
+        ], [], []],
+        ["help", "Troubleshooting", "", "", [
+          "<b>Transcription is very slow</b>: check that graphics card acceleration is on (the green box under the settings names the card). Without it the program runs on the CPU.",
+          "<b>The text is in a strange language</b>: choose the recording language yourself instead of “Automatic” and transcribe again.",
+          "<b>“Couldn't read this reply” when organizing</b>: copy the answer with the AI's copy button, not by selecting it with the mouse.",
+          "<b>The Word file was not updated</b>: close it in Word, then click “Update files”.",
+          "For anything else: <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
+        ], [], []]
+      ]
+    },
+    fr: {
+      page: "Guide d'utilisation · Nasikh", name: "Nasikh", home: "Accueil", download: "Télécharger", toc: "Sommaire",
+      title: "Guide d'utilisation de Nasikh", lead: "Tout ce qu'il faut savoir, étape par étape, avec des images du programme.",
+      by: "Créé par", rate: "Noter Nasikh", top: "↑ Haut de page",
+      sections: [
+        ["start", "Pour commencer", "Installer le programme et le préparer la première fois.", "", [
+          "Téléchargez le programme depuis la <a href=\"./\">page d'accueil</a>, lancez le fichier et choisissez la langue du programme.",
+          "Si « Windows a protégé votre ordinateur » s'affiche, cliquez sur <b>Informations complémentaires</b>, puis <b>Exécuter quand même</b>.",
+          "Au premier lancement, l'écran <b>« Préparation de Nasikh »</b> s'affiche : le programme télécharge une seule fois le modèle de transcription (1,5 Go). Si votre ordinateur a une carte NVIDIA, choisissez aussi <b>l'accélération par la carte graphique</b> (1,4 Go).",
+          "Si internet coupe pendant le téléchargement, cliquez sur « Réessayer » : il reprend là où il s'est arrêté.",
+          "Une courte visite suit ; vous pouvez la revoir depuis les réglages ⚙."
+        ], [], []],
+        ["transcribe", "Transcrire", "De l'enregistrement au texte écrit.", "transcribe", [
+          "Déposez des fichiers audio ou vidéo sur <b>« Déposez vos fichiers ici »</b>, ou cliquez sur <b>« Parcourir »</b>. Vous pouvez en ajouter plusieurs à la fois.",
+          "Les parties numérotées d'un même cours (comme « Cours 2a » et « Cours 2b ») sont fusionnées automatiquement.",
+          "Choisissez la <b>langue de l'enregistrement</b>, ou laissez « Automatique » pour que le programme la détecte.",
+          "Choisissez le mode : <b>« Précis »</b> est le meilleur pour les cours ; <b>« Rapide »</b> va deux fois plus vite, un peu moins précis.",
+          "Choisissez les formats : Word, texte brut et texte minuté pour la vidéo (SRT).",
+          "Cliquez sur <b>« Lancer la transcription »</b> et suivez le texte qui s'écrit dans « Transcription en direct ». Vous pouvez arrêter à tout moment."
+        ], [
+          "Dans <b>« Noms et termes »</b>, écrivez les noms et les termes du cours, séparés par des virgules : le programme corrige leur orthographe après la transcription.",
+          "Avec une carte NVIDIA, un cours d'une heure prend quelques minutes ; sur le processeur seul, c'est plus long."
+        ], []],
+        ["report", "Rapport de qualité", "Des remarques sur l'enregistrement et le texte qui montrent ce qui mérite d'être vérifié.", "report", [
+          "Ouvrez l'onglet <b>« Rapport de qualité »</b> une fois la transcription terminée.",
+          "Chaque remarque indique son heure : écoutez ce moment dans l'onglet « Texte » en cliquant sur la ligne elle-même.",
+          "Si le programme a supprimé une phrase répétée que l'orateur a vraiment dite, cliquez sur <b>« La remettre : l'orateur l'a dite »</b>.",
+          "Les remarques portent sur : les noms corrigés, les longs silences, le volume faible, les mots incertains et les parties abîmées du fichier."
+        ], [], []],
+        ["editor", "Écouter et corriger", "Vérifiez le texte en écoutant l'enregistrement.", "editor", [
+          "Ouvrez le cours depuis la <b>Bibliothèque</b> et appuyez sur lecture ▶. Le mot prononcé s'allume pendant l'écoute.",
+          "Cliquez sur un mot pour l'écouter à partir de là, utilisez les boutons 5 secondes pour reculer et avancer, et changez la vitesse dans le menu.",
+          "« Surligner les mots incertains » signale les mots qui peuvent demander une correction.",
+          "Cliquez sur <b>« Corriger le texte »</b>, puis sur une ligne pour la modifier, puis <b>« Terminer la correction »</b>.",
+          "Après correction, une barre « Vous avez corrigé le texte… » apparaît : cliquez sur <b>« Mettre à jour les fichiers »</b> pour que le programme mette à jour le Word et le texte."
+        ], [], ["Si vous avez modifié vous-même le fichier dans Word, le programme ne l'écrase jamais, pour garder vos modifications."]],
+        ["organize", "Organiser le Word avec l'IA", "Découpe le cours en sections titrées sans changer un mot du texte.", "organize", [
+          "Ouvrez l'onglet <b>« Organiser le Word »</b> et choisissez les options : nombre de sections et langue des titres, plus une remarque si vous voulez.",
+          "Cliquez sur <b>« Copier l'invite »</b>.",
+          "Ouvrez une <b>nouvelle conversation</b> dans Gemini, ChatGPT ou une autre IA, collez l'invite et envoyez-la.",
+          "Copiez la réponse <b>avec le bouton copier au-dessus de la réponse</b> (sans la sélectionner à la souris) et collez-la dans la troisième case.",
+          "Le programme liste les sections trouvées, chacune marquée « Trouvé » ou « Approximatif ».",
+          "Cliquez sur <b>« Créer le Word organisé »</b> : le fichier porte le titre du cours, et la copie non organisée va à la corbeille."
+        ], [
+          "L'IA propose seulement les titres et le début des sections ; le texte du Word est la transcription elle-même, à 100 %.",
+          "Si les titres sortent dans une autre langue que celle du cours, choisissez vous-même la « Langue des titres » et recopiez l'invite."
+        ], []],
+        ["translate", "Traduction", "Traduire le cours dans 9 langues avec l'IA, en gardant ses sections.", "translate", [
+          "Ouvrez l'onglet <b>« Traduire »</b> et choisissez la langue dans <b>« Traduire en »</b>.",
+          "Le cours est découpé en parties (environ mille mots chacune), car les IA gratuites coupent les longues réponses.",
+          "Pour chaque partie : cliquez sur <b>« Copier l'invite »</b>, collez-la dans une <b>nouvelle conversation</b>, puis copiez toute la réponse avec le bouton copier et collez-la dans la case de la partie.",
+          "Chaque partie collée est enregistrée automatiquement : vous pouvez finir plus tard. <b>« Effacer »</b> vide une partie pour la refaire.",
+          "Quand toutes les parties sont là, cliquez sur <b>« Créer le Word traduit »</b>."
+        ], [
+          "Copiez la réponse <b>entière, avec la liste des noms</b> à la fin (après @@@) : le programme s'en sert pour écrire les noms de la même façon dans toutes les parties, et elle n'apparaît pas dans le Word.",
+          "Dans « Remarque », vous pouvez préciser l'orthographe voulue des noms, par exemple : « écris : Lugdunum, Fourvière ».",
+          "Utilisez le modèle le plus puissant de l'IA (comme Pro ou Thinking) pour une traduction plus précise."
+        ], ["Si une partie affiche une alerte (mauvaise langue, beaucoup plus courte que l'original, ou titre de section manquant), demandez à l'IA de la retraduire."]],
+        ["library", "Bibliothèque et recherche", "Tous vos cours au même endroit.", "", [
+          "Cliquez sur <b>« Bibliothèque »</b> en haut pour voir tous les cours transcrits.",
+          "Tapez un mot dans la recherche : les passages de tous les cours s'affichent, et un clic vous amène au moment précis.",
+          "Le crayon ✏ renomme un cours, et × le retire de la bibliothèque (les fichiers Word et l'enregistrement d'origine ne sont pas supprimés).",
+          "<b>« Ouvrir le Word »</b>, <b>« Ouvrir le dossier »</b> et <b>« Copier le texte »</b> sont sous le texte."
+        ], [], []],
+        ["settings", "Réglages", "Le bouton ⚙ en haut.", "settings", [
+          "<b>Langue</b> : arabe, anglais ou français.",
+          "<b>Apparence</b> : automatique (comme Windows), claire ou sombre.",
+          "<b>Emplacement des fichiers</b> : à côté de l'enregistrement d'origine, ou cliquez sur « Choisir un dossier… » pour enregistrer tous les nouveaux fichiers au même endroit.",
+          "<b>Guide d'utilisation</b> ouvre cette page, et <b>Visite guidée</b> relance la visite.",
+          "Quand une nouvelle version sort, un point apparaît sur ⚙ avec l'avis « Une nouvelle version est disponible » : cliquez sur « Mettre à jour ». Votre bibliothèque et vos réglages restent tels quels."
+        ], [], []],
+        ["tips", "Conseils pour un meilleur résultat", "", "", [
+          "Placez le téléphone <b>près de l'orateur</b> : la distance et le bruit sont ce qui fait le plus baisser la précision.",
+          "Enregistrez si possible tout le cours dans un seul fichier ; s'il est découpé, numérotez les parties pour que le programme les fusionne.",
+          "Écrivez les noms rares dans « Noms et termes » avant la transcription.",
+          "Écoutez les passages signalés par le rapport de qualité."
+        ], [], []],
+        ["help", "Dépannage", "", "", [
+          "<b>La transcription est très lente</b> : vérifiez que l'accélération graphique est active (la case verte sous les réglages nomme la carte). Sans elle, le programme utilise le processeur.",
+          "<b>Le texte est dans une langue étrange</b> : choisissez vous-même la langue de l'enregistrement au lieu d'« Automatique » et relancez.",
+          "<b>« Réponse illisible » lors de l'organisation</b> : copiez la réponse avec le bouton copier de l'IA, pas à la souris.",
+          "<b>Le Word n'a pas été mis à jour</b> : fermez-le dans Word, puis cliquez sur « Mettre à jour les fichiers ».",
+          "Pour tout le reste : <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
+        ], [], []]
+      ]
+    }
+  };
+
+  var PANELS = ["organize", "translate", "report", "settings"];  // one panel of the window, shown narrower
+
+  function pickLang() {
+    var m = /[?&]lang=(ar|en|fr)/.exec(location.search);
+    if (m) return m[1];
+    try { var saved = localStorage.getItem("nasikh-lang"); if (G[saved]) return saved; } catch (e) {}
+    var nav = (navigator.language || "ar").slice(0, 2);
+    return G[nav] ? nav : "ar";
+  }
+
+  function render(lang) {
+    var g = G[lang], root = document.documentElement;
+    root.lang = lang;
+    root.dir = lang === "ar" ? "rtl" : "ltr";
+    document.title = g.page;
+    document.querySelectorAll("[data-t]").forEach(function (el) { el.textContent = g[el.getAttribute("data-t")] || ""; });
+    document.querySelectorAll(".langs button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    var latin = lang === "ar" ? "" : "-latin";
+    document.querySelectorAll("img.mark").forEach(function (im) { im.src = "img/icon" + latin + ".png"; });
+    document.getElementById("favicon").href = "img/favicon" + latin + ".png";
+    // the texts are written here, in this file: their HTML (links, bold) is trusted
+    document.getElementById("toc").innerHTML = "<b>" + g.toc + "</b>" + g.sections.map(function (s, i) {
+      return '<a href="#' + s[0] + '">' + (i + 1) + ". " + s[1] + "</a>";
+    }).join("");
+    document.getElementById("guide").innerHTML = g.sections.map(function (s, i) {
+      return '<section id="' + s[0] + '"><h2><span class="n">' + (i + 1) + "</span>" + s[1] + "</h2>" +
+        (s[2] ? '<p class="intro">' + s[2] + "</p>" : "") +
+        (s[3] ? '<div class="shot' + (PANELS.indexOf(s[3]) >= 0 ? " panel" : "") + '"><img src="img/shot-' + lang + "-" + s[3] +
+          '.webp" alt="' + s[1] + '" loading="lazy"></div>' : "") +
+        (s[4].length ? "<" + (s[0] === "tips" || s[0] === "help" || s[0] === "library" || s[0] === "settings" ? "ul" : "ol") + ">" +
+          s[4].map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</" + (s[0] === "tips" || s[0] === "help" || s[0] === "library" || s[0] === "settings" ? "ul" : "ol") + ">" : "") +
+        s[5].map(function (x) { return '<p class="tip">' + x + "</p>"; }).join("") +
+        s[6].map(function (x) { return '<p class="warn">' + x + "</p>"; }).join("") +
+        '<a class="back" href="#top">' + g.top + "</a></section>";
+    }).join("");
+    try { localStorage.setItem("nasikh-lang", lang); } catch (e) {}
+    if (location.hash) { var t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+    markToc();
+  }
+
+  function markToc() {
+    var current = null;
+    document.querySelectorAll("#guide section").forEach(function (s) { if (s.getBoundingClientRect().top < 140) current = s.id; });
+    document.querySelectorAll("#toc a").forEach(function (a) { a.classList.toggle("on", a.getAttribute("href") === "#" + current); });
+  }
+
+  document.body.id = "top";
+  var lang = pickLang();
+  render(lang);
+  document.querySelectorAll(".langs button").forEach(function (b) {
+    b.addEventListener("click", function () { lang = b.dataset.lang; render(lang); });
+  });
+  window.addEventListener("scroll", markToc, { passive: true });
+})();
+</script>
+<script data-goatcounter="https://nasikh.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
