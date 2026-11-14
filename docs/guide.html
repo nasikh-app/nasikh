@@ -128,7 +128,7 @@
           "إن ظهرت العناوين بلغة غير لغة المحاضرة، اختر «لغة العناوين» يدوياً وانسخ البرومبت من جديد."
         ], []],
         ["translate", "الترجمة", "ترجمة المحاضرة إلى 9 لغات بمساعدة الذكاء الاصطناعي، مع الحفاظ على أقسامها.", "translate", [
-          "افتح تبويب <b>«ترجمة»</b>، واختر بأعلاه <b>«يدوي (نسخ ولصق)»</b>، ثم اللغة من <b>«ترجم إلى»</b>.",
+          "افتح تبويب <b>«ترجمة»</b>، واختر بأعلاه <b>«يدوي (نسخ ولصق)»</b>، وفي <b>«نوع الترجمة»</b> اختر <b>«مستند Word»</b> (لترجمة فيلم انظر قسم «ترجمة الأفلام والفيديو»)، ثم اللغة من <b>«ترجم إلى»</b>.",
           "تظهر المحاضرة مقسّمة إلى أجزاء (حوالي ألف كلمة لكل جزء) لأن المنصات المجانية تقطع الأجوبة الطويلة.",
           "لكل جزء: اضغط <b>«انسخ البرومبت»</b>، والصقه في <b>محادثة جديدة</b>، ثم انسخ الجواب كاملاً بزر النسخ والصقه في مربع الجزء.",
           "كل جزء تلصقه يُحفظ تلقائياً، فيمكنك الإكمال لاحقاً. زر <b>«مسح»</b> يفرّغ الجزء إن أردت إعادته.",
@@ -170,7 +170,8 @@
           "<b>اللغة</b>: العربية أو الإنجليزية أو الفرنسية.",
           "<b>المظهر</b>: تلقائي (حسب ويندوز) أو فاتح أو غامق.",
           "<b>مكان حفظ الملفات</b>: بجانب التسجيل الأصلي، أو اضغط «اختيار مجلد…» لحفظ كل الملفات الجديدة في مجلد واحد.",
-          "<b>دليل الاستخدام</b> يفتح هذه الصفحة، و<b>جولة تعريفية</b> تعيد الجولة.",
+          "<b>الذكاء الاصطناعي</b>: ربط مفتاحك (Gemini أو ChatGPT أو Claude) واختيار النموذج، وبجانبه اسم الخدمة المربوطة.",
+          "<b>ما الجديد</b> يعرض مقاطع قصيرة عن ميزات الإصدار، و<b>دليل الاستخدام</b> يفتح هذه الصفحة، و<b>جولة تعريفية</b> تعيد الجولة.",
           "عند صدور إصدار جديد تظهر نقطة على ⚙ وتنبيه «يتوفر إصدار جديد»: اضغط «حدّث الآن». مكتبتك وإعداداتك تبقى كما هي."
         ], [], []],
         ["tips", "نصائح لأفضل نتيجة", "", "", [
@@ -184,6 +185,8 @@
           "<b>النص بلغة غريبة</b>: اختر لغة التسجيل يدوياً بدل «تلقائي» وأعد التفريغ.",
           "<b>«تعذّرت قراءة الرد» عند الترتيب</b>: انسخ الرد بزر النسخ في المنصة، لا بتحديده بالماوس.",
           "<b>لم يُحدَّث ملف Word</b>: أغلق الملف في Word ثم اضغط «تحديث الملفات».",
+          "<b>توقّف الترتيب أو الترجمة التلقائية</b>: يكتب البرنامج السبب تحت الزر. «طلبات كثيرة» انتظر دقيقة، و«انتهت الحصة اليومية» حاول غداً، و«الخدمة مزدحمة» حاول بعد قليل. الأجزاء المترجمة محفوظة، والمحاولة التالية تكمل من حيث توقف.",
+          "<b>لا تظهر الترجمة في المشغّل</b>: شغّل نسخة <code>… - Arabic subtitles.mkv</code> المدموجة، أو اختر الترجمة من قائمة Subtitle في VLC، وتأكد أن ملف SRT بجانب الفيديو ويبدأ اسمه باسم الفيديو.",
           "لأي مشكلة أخرى: <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
         ], [], []]
       ]
@@ -236,7 +239,7 @@
           "If the titles come out in another language than the lecture's, set “Heading language” yourself and copy the prompt again."
         ], []],
         ["translate", "Translation", "Translating the lecture into 9 languages with AI, keeping its sections.", "translate", [
-          "Open the <b>“Translate”</b> tab, choose <b>“Manual (copy and paste)”</b> at its top, then the language in <b>“Translate into”</b>.",
+          "Open the <b>“Translate”</b> tab, choose <b>“Manual (copy and paste)”</b> at its top and <b>“Word document”</b> under <b>“Translation type”</b> (for a film, see “Film and video subtitles”), then the language in <b>“Translate into”</b>.",
           "The lecture is split into parts (about a thousand words each) because free AI chats cut long answers short.",
           "For each part: click <b>“Copy prompt”</b>, paste it into a <b>new chat</b>, then copy the whole answer with the copy button and paste it into the part's box.",
           "Every part you paste is saved automatically, so you can finish later. <b>“Clear”</b> empties a part if you want to redo it.",
@@ -278,7 +281,8 @@
           "<b>Language</b>: Arabic, English or French.",
           "<b>Appearance</b>: automatic (follows Windows), light or dark.",
           "<b>Where files are saved</b>: next to the original recording, or click “Choose folder…” to save every new file in one folder.",
-          "<b>User guide</b> opens this page, and <b>Quick tour</b> replays the tour.",
+          "<b>AI</b>: link your key (Gemini, ChatGPT or Claude) and pick the model; the linked service is shown next to it.",
+          "<b>What's new</b> shows short clips of the version's features, <b>User guide</b> opens this page, and <b>Quick tour</b> replays the tour.",
           "When a new version is out, a dot appears on ⚙ with an “A new version is available” notice: click “Update now”. Your library and settings stay as they are."
         ], [], []],
         ["tips", "Tips for the best result", "", "", [
@@ -292,6 +296,8 @@
           "<b>The text is in a strange language</b>: choose the recording language yourself instead of “Automatic” and transcribe again.",
           "<b>“Couldn't read this reply” when organizing</b>: copy the answer with the AI's copy button, not by selecting it with the mouse.",
           "<b>The Word file was not updated</b>: close it in Word, then click “Update files”.",
+          "<b>Automatic organizing or translating stopped</b>: the reason is written under the button. “Too many requests”: wait a minute; “daily quota used up”: try tomorrow; “service crowded”: try again shortly. Translated parts are saved, and the next try continues where it stopped.",
+          "<b>The subtitles don't show in the player</b>: play the <code>… - Arabic subtitles.mkv</code> copy, or pick the subtitles in VLC's Subtitle menu, and check that the SRT file sits next to the video with a name starting like the video's.",
           "For anything else: <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
         ], [], []]
       ]
@@ -344,7 +350,7 @@
           "Si les titres sortent dans une autre langue que celle du cours, choisissez vous-même la « Langue des titres » et recopiez l'invite."
         ], []],
         ["translate", "Traduction", "Traduire le cours dans 9 langues avec l'IA, en gardant ses sections.", "translate", [
-          "Ouvrez l'onglet <b>« Traduire »</b>, choisissez <b>« Manuel (copier-coller) »</b> en haut, puis la langue dans <b>« Traduire en »</b>.",
+          "Ouvrez l'onglet <b>« Traduire »</b>, choisissez <b>« Manuel (copier-coller) »</b> en haut et <b>« Document Word »</b> dans <b>« Type de traduction »</b> (pour un film, voir « Sous-titres de films et de vidéos »), puis la langue dans <b>« Traduire en »</b>.",
           "Le cours est découpé en parties (environ mille mots chacune), car les IA gratuites coupent les longues réponses.",
           "Pour chaque partie : cliquez sur <b>« Copier l'invite »</b>, collez-la dans une <b>nouvelle conversation</b>, puis copiez toute la réponse avec le bouton copier et collez-la dans la case de la partie.",
           "Chaque partie collée est enregistrée automatiquement : vous pouvez finir plus tard. <b>« Effacer »</b> vide une partie pour la refaire.",
@@ -386,7 +392,8 @@
           "<b>Langue</b> : arabe, anglais ou français.",
           "<b>Apparence</b> : automatique (comme Windows), claire ou sombre.",
           "<b>Emplacement des fichiers</b> : à côté de l'enregistrement d'origine, ou cliquez sur « Choisir un dossier… » pour enregistrer tous les nouveaux fichiers au même endroit.",
-          "<b>Guide d'utilisation</b> ouvre cette page, et <b>Visite guidée</b> relance la visite.",
+          "<b>IA</b> : relier votre clé (Gemini, ChatGPT ou Claude) et choisir le modèle ; le service relié est indiqué à côté.",
+          "<b>Nouveautés</b> montre de courtes vidéos des fonctions de la version, <b>Guide d'utilisation</b> ouvre cette page, et <b>Visite guidée</b> relance la visite.",
           "Quand une nouvelle version sort, un point apparaît sur ⚙ avec l'avis « Une nouvelle version est disponible » : cliquez sur « Mettre à jour ». Votre bibliothèque et vos réglages restent tels quels."
         ], [], []],
         ["tips", "Conseils pour un meilleur résultat", "", "", [
@@ -400,6 +407,8 @@
           "<b>Le texte est dans une langue étrange</b> : choisissez vous-même la langue de l'enregistrement au lieu d'« Automatique » et relancez.",
           "<b>« Réponse illisible » lors de l'organisation</b> : copiez la réponse avec le bouton copier de l'IA, pas à la souris.",
           "<b>Le Word n'a pas été mis à jour</b> : fermez-le dans Word, puis cliquez sur « Mettre à jour les fichiers ».",
+          "<b>L'organisation ou la traduction automatique s'est arrêtée</b> : la raison est écrite sous le bouton. « Trop de requêtes » : attendez une minute ; « quota quotidien épuisé » : réessayez demain ; « service saturé » : réessayez bientôt. Les parties traduites sont enregistrées, et l'essai suivant reprend là où il s'est arrêté.",
+          "<b>Les sous-titres ne s'affichent pas dans le lecteur</b> : lancez la copie <code>… - French subtitles.mkv</code>, ou choisissez les sous-titres dans le menu Sous-titres de VLC, et vérifiez que le fichier SRT est à côté de la vidéo et que son nom commence comme celui de la vidéo.",
           "Pour tout le reste : <a href=\"mailto:nasikh.app@gmail.com\">nasikh.app@gmail.com</a>."
         ], [], []]
       ]
