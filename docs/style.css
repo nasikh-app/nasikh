@@ -54,6 +54,12 @@ section .lead { margin: 0 auto 36px; text-align: center; color: var(--muted); ma
 
 /* features */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.clip { margin: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+.clip video { display: block; width: 100%; height: auto; aspect-ratio: 850 / 650; background: var(--surface-2); }
+.clip figcaption { padding: 14px 16px 16px; }
+.clip h3 { margin: 0 0 4px; font-size: 18px; }
+.clip p { margin: 0; color: var(--muted); font-size: 15px; }
 .card { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); }
 .card .ic { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 10px; }
 .card .ic svg { width: 22px; height: 22px; }

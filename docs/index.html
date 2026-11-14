@@ -48,6 +48,18 @@
     <div class="shot"><img id="shotMain" src="img/shot-ar-transcribe.webp" width="1600" height="900" alt=""></div>
   </div>
 
+  <section id="new">
+    <div class="wrap">
+      <h2 data-t="newTitle"></h2>
+      <p class="lead" data-t="newLead"></p>
+      <div class="clips">
+        <figure class="clip"><video data-clip="ai" muted loop playsinline autoplay preload="metadata"></video><figcaption><h3 data-t="n1t"></h3><p data-t="n1"></p></figcaption></figure>
+        <figure class="clip"><video data-clip="organize" muted loop playsinline autoplay preload="metadata"></video><figcaption><h3 data-t="n2t"></h3><p data-t="n2"></p></figcaption></figure>
+        <figure class="clip"><video data-clip="film" muted loop playsinline autoplay preload="metadata"></video><figcaption><h3 data-t="n3t"></h3><p data-t="n3"></p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="features" class="alt">
     <div class="wrap">
       <h2 data-t="featTitle"></h2>
@@ -154,8 +166,8 @@
       featTitle: "كل ما تحتاجه لمحاضراتك", featLead: "من التسجيل إلى ملف Word مرتّب ومترجم، في برنامج واحد.",
       f1t: "تفريغ دقيق", f1: "أكثر من 90 لغة، منها العربية والفرنسية والإنجليزية، مع تقرير جودة يدلّك على المواضع التي تحتاج مراجعة.",
       f2t: "ملفات جاهزة", f2: "ملف Word منسّق، ونص عادي، ونص بتوقيت للفيديو (SRT)، تُحفظ بجانب التسجيل أو في المجلد الذي تختاره.",
-      f3t: "ترتيب في أقسام", f3: "يقسّم المحاضرة إلى أقسام بعناوين بمساعدة أي منصة ذكاء اصطناعي، دون أن يغيّر كلمة واحدة من النص.",
-      f4t: "ترجمة المحاضرة", f4: "ترجمة إلى 9 لغات مع الحفاظ على الأقسام والعناوين، وتنبيه إذا نقص شيء من الترجمة.",
+      f3t: "ترتيب في أقسام", f3: "يقسّم المحاضرة إلى أقسام بعناوين بمساعدة أي منصة ذكاء اصطناعي، أو بضغطة واحدة بمفتاحك الخاص، دون أن يغيّر كلمة واحدة من النص.",
+      f4t: "ترجمة المحاضرات والأفلام", f4: "ترجمة إلى 9 لغات مع الحفاظ على الأقسام والعناوين، وللأفلام ترجمة بتوقيت كل سطر تُدمج داخل الفيديو، مع تنبيه إذا نقص شيء.",
       f5t: "استماع وتصحيح", f5: "استمع إلى التسجيل والنص يتابع الكلمة المقروءة، وصحّح أي سطر بضغطة.",
       f6t: "مكتبة وبحث", f6: "كل محاضراتك في مكان واحد، مع بحث في نصوصها كلها يأخذك إلى اللحظة نفسها في التسجيل.",
       f7t: "سريع على كرت الشاشة", f7: "يستعمل كرت NVIDIA إن وُجد ليكون التفريغ أسرع بعدة مرات، ويعمل على المعالج في كل الأجهزة.",
@@ -174,7 +186,11 @@
       rDiskT: "المساحة", rDisk: "حوالي 2 غ.ب، و3.5 غ.ب مع تسريع كرت الشاشة",
       rNetT: "الإنترنت", rNet: "للتنزيل والتجهيز الأول فقط، ثم يعمل دونه",
       rGpuT: "كرت الشاشة", rGpu: "اختياري: كرت NVIDIA يجعل التفريغ أسرع بكثير",
-      prTitle: "تسجيلاتك تبقى عندك", pr: "يجري التفريغ كله على جهازك. لا يُرفع أي تسجيل أو نص إلى أي خادم، ولا يحتاج البرنامج إلى حساب.",
+      prTitle: "تسجيلاتك تبقى عندك", pr: "يجري التفريغ كله على جهازك، ولا يُرفع أي تسجيل إلى أي خادم، ولا يحتاج البرنامج إلى حساب. فقط إن اخترت الترتيب أو الترجمة بالذكاء الاصطناعي بمفتاحك، يُرسل نص المحاضرة إلى الخدمة التي اخترتها.",
+      newTitle: "الجديد في الإصدار 1.0.2", newLead: "مقاطع قصيرة من البرنامج نفسه.",
+      n1t: "الذكاء الاصطناعي بمفتاحك", n1: "اربط مفتاح Gemini المجاني مرة واحدة، فيرتّب البرنامج محاضراتك ويترجمها بضغطة، بلا نسخ ولصق.",
+      n2t: "ترتيب Word بضغطة واحدة", n2: "يقسّم المحاضرة إلى أقسام بعناوين ويريك الأقسام قبل إنشاء الملف. النص نفسه لا يتغيّر.",
+      n3t: "ترجمة الأفلام", n3: "يترجم كل سطر ويبقيه في توقيته، ثم يدمج الترجمة داخل الفيديو فتظهر وحدها في المشغّل. ويمكن أن تكون بلغتين.",
       b1: "مجاني بالكامل", b2: "بلا إعلانات", b3: "بلا حسابات", b4: "يعمل دون إنترنت",
       faqTitle: "أسئلة شائعة",
       q1: "هل البرنامج مجاني فعلاً؟", a1: "نعم، مجاني بالكامل وبلا إعلانات ولا اشتراكات.",
@@ -198,8 +214,8 @@
       featTitle: "Everything your lectures need", featLead: "From the recording to an organized, translated Word file, in one program.",
       f1t: "Accurate transcription", f1: "More than 90 languages, including Arabic, French and English, with a quality report pointing to the parts worth checking.",
       f2t: "Ready-made files", f2: "A formatted Word file, plain text and timed text for video (SRT), saved next to the recording or in a folder you choose.",
-      f3t: "Organized into sections", f3: "Splits the lecture into titled sections with any AI chat, without changing a single word of the text.",
-      f4t: "Lecture translation", f4: "Translation into 9 languages keeping sections and titles, with a warning if anything is missing.",
+      f3t: "Organized into sections", f3: "Splits the lecture into titled sections with any AI chat, or in one click with your own key, without changing a single word of the text.",
+      f4t: "Lectures and films translated", f4: "Translation into 9 languages keeping sections and titles; for films, subtitles timed line by line that can go inside the video. With a warning if anything is missing.",
       f5t: "Listen and correct", f5: "Play the recording while the text follows the spoken word, and fix any line with a click.",
       f6t: "Library and search", f6: "All your lectures in one place, with a search through every text that takes you to the moment in the recording.",
       f7t: "Fast on graphics cards", f7: "Uses an NVIDIA card when there is one for several times faster transcription, and runs on the CPU everywhere.",
@@ -218,7 +234,11 @@
       rDiskT: "Disk space", rDisk: "About 2 GB, 3.5 GB with graphics card acceleration",
       rNetT: "Internet", rNet: "Only to download and set up; then it works offline",
       rGpuT: "Graphics card", rGpu: "Optional: an NVIDIA card makes transcription much faster",
-      prTitle: "Your recordings stay with you", pr: "All transcription happens on your computer. No recording or text is uploaded to any server, and the program needs no account.",
+      prTitle: "Your recordings stay with you", pr: "All transcription happens on your computer, no recording is uploaded to any server, and the program needs no account. Only if you choose to organize or translate with AI using your own key is the lecture's text sent to the service you chose.",
+      newTitle: "New in version 1.0.2", newLead: "Short clips from the program itself.",
+      n1t: "AI with your own key", n1: "Link a free Gemini key once, and the program organizes and translates your lectures in one click, with no copying and pasting.",
+      n2t: "Organize Word in one click", n2: "It splits the lecture into titled sections and shows them before creating the file. The text itself is not changed.",
+      n3t: "Film subtitles", n3: "Each line is translated and keeps its time, then the subtitles go inside the video and show by themselves in the player. They can be in two languages.",
       b1: "Completely free", b2: "No ads", b3: "No accounts", b4: "Works offline",
       faqTitle: "Frequently asked questions",
       q1: "Is it really free?", a1: "Yes — completely free, with no ads and no subscriptions.",
@@ -242,8 +262,8 @@
       featTitle: "Tout ce dont vos cours ont besoin", featLead: "De l'enregistrement à un fichier Word organisé et traduit, dans un seul programme.",
       f1t: "Transcription précise", f1: "Plus de 90 langues, dont l'arabe, le français et l'anglais, avec un rapport de qualité qui signale les passages à vérifier.",
       f2t: "Fichiers prêts", f2: "Un fichier Word mis en forme, du texte brut et du texte minuté pour la vidéo (SRT), à côté de l'enregistrement ou dans le dossier de votre choix.",
-      f3t: "Organisation en sections", f3: "Découpe le cours en sections titrées avec n'importe quelle IA, sans changer un seul mot du texte.",
-      f4t: "Traduction du cours", f4: "Traduction dans 9 langues en gardant sections et titres, avec une alerte s'il manque quelque chose.",
+      f3t: "Organisation en sections", f3: "Découpe le cours en sections titrées avec n'importe quelle IA, ou en un clic avec votre propre clé, sans changer un seul mot du texte.",
+      f4t: "Traduction des cours et des films", f4: "Traduction dans 9 langues en gardant sections et titres ; pour les films, des sous-titres minutés ligne par ligne, intégrables à la vidéo. Avec une alerte s'il manque quelque chose.",
       f5t: "Écouter et corriger", f5: "Écoutez l'enregistrement pendant que le texte suit le mot prononcé, et corrigez une ligne d'un clic.",
       f6t: "Bibliothèque et recherche", f6: "Tous vos cours au même endroit, avec une recherche dans tous les textes qui vous amène au moment précis de l'enregistrement.",
       f7t: "Rapide avec une carte graphique", f7: "Utilise une carte NVIDIA s'il y en a une pour une transcription plusieurs fois plus rapide, et fonctionne partout sur le processeur.",
@@ -262,7 +282,11 @@
       rDiskT: "Espace disque", rDisk: "Environ 2 Go, 3,5 Go avec l'accélération graphique",
       rNetT: "Internet", rNet: "Seulement pour télécharger et préparer ; ensuite hors ligne",
       rGpuT: "Carte graphique", rGpu: "Facultatif : une carte NVIDIA accélère beaucoup la transcription",
-      prTitle: "Vos enregistrements restent chez vous", pr: "Toute la transcription se fait sur votre ordinateur. Aucun enregistrement ni texte n'est envoyé à un serveur, et le programme ne demande aucun compte.",
+      prTitle: "Vos enregistrements restent chez vous", pr: "Toute la transcription se fait sur votre ordinateur, aucun enregistrement n'est envoyé à un serveur, et le programme ne demande aucun compte. Seulement si vous choisissez d'organiser ou de traduire avec l'IA et votre propre clé, le texte du cours est envoyé au service choisi.",
+      newTitle: "Nouveau dans la version 1.0.2", newLead: "De courtes vidéos du programme lui-même.",
+      n1t: "L'IA avec votre propre clé", n1: "Reliez une fois une clé Gemini gratuite, et le programme organise et traduit vos cours en un clic, sans copier-coller.",
+      n2t: "Organiser le Word en un clic", n2: "Il découpe le cours en sections titrées et vous les montre avant de créer le fichier. Le texte lui-même ne change pas.",
+      n3t: "Sous-titres de films", n3: "Chaque ligne est traduite et garde son minutage, puis les sous-titres sont intégrés à la vidéo et s'affichent tout seuls dans le lecteur. Ils peuvent être en deux langues.",
       b1: "Entièrement gratuit", b2: "Sans publicité", b3: "Sans compte", b4: "Fonctionne hors ligne",
       faqTitle: "Questions fréquentes",
       q1: "Est-ce vraiment gratuit ?", a1: "Oui, entièrement gratuit, sans publicité ni abonnement.",
@@ -316,6 +340,13 @@
     document.getElementById("shotMain").src = "img/shot-" + lang + "-transcribe.webp";
     document.getElementById("shotMain").alt = t.tagline;
     document.getElementById("shotEditor").src = "img/shot-" + lang + "-editor.webp";
+    document.querySelectorAll("video[data-clip]").forEach(function (v) {
+      var src = "img/new-" + v.dataset.clip + "-" + lang + ".mp4";
+      if (v.getAttribute("src") === src) return;
+      v.setAttribute("poster", "img/new-" + v.dataset.clip + "-" + lang + ".jpg");
+      v.setAttribute("src", src);
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+    });
     document.getElementById("shotEditor").alt = t.edTitle;
     if (release) {
       var v = release.version.split("-");

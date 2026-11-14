@@ -27,6 +27,8 @@
   article li b { color: var(--ink); }
   article .shot { margin: 8px 0 18px; }
   article .shot.panel { width: fit-content; max-width: min(100%, 460px); margin-inline: auto; }
+  article .shot:has(> video) { width: fit-content; max-width: 100%; margin-inline: auto; }
+  article .shot video { display: block; width: 100%; max-width: 680px; height: auto; aspect-ratio: 850 / 650; }
   .tip { padding: 12px 16px; border-radius: 12px; background: var(--teal-soft); font-size: 15.5px; margin: 0 0 12px; }
   .tip::before { content: "💡 "; }
   .warn { padding: 12px 16px; border-radius: 12px; background: var(--accent-soft); font-size: 15.5px; margin: 0 0 12px; }
@@ -115,7 +117,7 @@
           "بعد التصحيح يظهر شريط «صحّحت النص…»: اضغط <b>«تحديث الملفات»</b> ليحدّث البرنامج ملف Word والنص."
         ], [], ["إن كنت عدّلت ملف Word بنفسك في Word، لا يكتب البرنامج فوقه حفاظاً على تعديلاتك."]],
         ["organize", "ترتيب ملف Word بالذكاء الاصطناعي", "يقسّم المحاضرة إلى أقسام بعناوين، دون أن يغيّر كلمة من النص.", "organize", [
-          "افتح تبويب <b>«ترتيب ملف Word»</b> واختر الخيارات: عدد الأقسام ولغة العناوين، وأضف ملاحظة إن أردت.",
+          "افتح تبويب <b>«ترتيب ملف Word»</b>، واختر بأعلاه <b>«يدوي (نسخ ولصق)»</b>، ثم الخيارات: عدد الأقسام ولغة العناوين، وأضف ملاحظة إن أردت.",
           "اضغط <b>«انسخ البرومبت»</b>.",
           "افتح <b>محادثة جديدة</b> في Gemini أو ChatGPT أو أي منصة، والصق البرومبت وأرسله.",
           "انسخ رد المنصة <b>بزر النسخ الذي يظهر فوق الرد</b> (لا تحدّده بالماوس)، والصقه في المربع الثالث.",
@@ -126,7 +128,7 @@
           "إن ظهرت العناوين بلغة غير لغة المحاضرة، اختر «لغة العناوين» يدوياً وانسخ البرومبت من جديد."
         ], []],
         ["translate", "الترجمة", "ترجمة المحاضرة إلى 9 لغات بمساعدة الذكاء الاصطناعي، مع الحفاظ على أقسامها.", "translate", [
-          "افتح تبويب <b>«ترجمة»</b> واختر اللغة من <b>«ترجم إلى»</b>.",
+          "افتح تبويب <b>«ترجمة»</b>، واختر بأعلاه <b>«يدوي (نسخ ولصق)»</b>، ثم اللغة من <b>«ترجم إلى»</b>.",
           "تظهر المحاضرة مقسّمة إلى أجزاء (حوالي ألف كلمة لكل جزء) لأن المنصات المجانية تقطع الأجوبة الطويلة.",
           "لكل جزء: اضغط <b>«انسخ البرومبت»</b>، والصقه في <b>محادثة جديدة</b>، ثم انسخ الجواب كاملاً بزر النسخ والصقه في مربع الجزء.",
           "كل جزء تلصقه يُحفظ تلقائياً، فيمكنك الإكمال لاحقاً. زر <b>«مسح»</b> يفرّغ الجزء إن أردت إعادته.",
@@ -136,6 +138,28 @@
           "في «ملاحظة إضافية» يمكنك كتابة طريقة كتابة الأسماء التي تريدها، مثل: «اكتب: كاتدرائية، لوغدونوم».",
           "استعمل النموذج الأقوى في المنصة (مثل Pro أو Thinking) لترجمة أدق."
         ], ["إن ظهر تنبيه على جزء (لغة خاطئة، أو ترجمة أقصر بكثير من الأصل، أو عنوان قسم ناقص) فاطلب من المنصة إعادة الترجمة."]],
+        ["ai", "الترتيب والترجمة بضغطة واحدة", "بدل النسخ واللصق، يرسل البرنامج النص إلى الذكاء الاصطناعي بمفتاحك الخاص ويستلم الرد وحده.", "ai", [
+          "افتح ⚙ ← <b>«الذكاء الاصطناعي»</b>، واختر <b>Gemini</b> أو <b>ChatGPT</b> أو <b>Claude</b>.",
+          "اضغط <b>«احصل على مفتاح»</b>: تفتح صفحة المزوّد. في Gemini: سجّل الدخول بحساب Google، ثم <b>Get API key</b> ← <b>Create API key</b>، وانسخ المفتاح.",
+          "الصق المفتاح واضغط <b>«تحقّق واحفظ»</b>. يتحقق البرنامج منه ويختار أسرع نموذج يعمل الآن (حتى نصف دقيقة).",
+          "في تبويب «ترتيب ملف Word» أو «ترجمة»، اختر بأعلاه <b>«تلقائي بـ Gemini»</b>، ثم اضغط <b>«رتّب تلقائياً»</b> أو <b>«ترجم كل الأجزاء تلقائياً»</b>. يظهر على الزر الوقت المنقضي، واضغط عليه للإيقاف. يتذكّر البرنامج اختيارك.",
+          "تبقى المراجعة كما هي: قائمة الأقسام، وتنبيهات الترجمة، ثم إنشاء ملف Word."
+        ], [
+          "<b>Gemini مجاني</b>: يكفي حساب Google. للخطة المجانية حدّ يومي لعدد الطلبات، وقد تستعمل Google النصوص المرسلة لتحسين خدماتها. الترتيب يستغرق حوالي دقيقة، وكل جزء من الترجمة حوالي نصف دقيقة.",
+          "<b>ChatGPT وClaude يتطلبان رصيداً مدفوعاً</b> في حساب المطوّرين لدى المزوّد؛ اشتراك ChatGPT Plus أو Claude Pro لا يشمله.",
+          "يُرسل نص المحاضرة فقط، ولا يغادر التسجيل الصوتي جهازك. المفتاح محفوظ في مدير بيانات الاعتماد في ويندوز."
+        ], ["إن لم يردّ النموذج أو كان مشغولاً، ينتقل البرنامج وحده إلى نموذج آخر. ويمكنك اختيار النموذج يدوياً من نافذة «الذكاء الاصطناعي»."]],
+        ["films", "ترجمة الأفلام والفيديو", "ترجمة بتوقيت كل سطر، تضعها بجانب الفيديو أو تدمجها داخله.", "clip:film", [
+          "فرّغ الفيديو كالعادة. إن كان الفلم إنجليزياً فلا حاجة إلى خيار «نص إنجليزي بتوقيت للفيديو».",
+          "افتح تبويب <b>«ترجمة»</b> واختر <b>«ترجمة فيديو (SRT)»</b> (يُختار وحده لملفات الفيديو)، ثم اللغة من «ترجم إلى».",
+          "ترجم الأجزاء تلقائياً بـ Gemini، أو يدوياً بالنسخ واللصق. يُترجم كل سطر ويبقى في توقيته.",
+          "اضغط <b>«إنشاء ملف الترجمة (SRT)»</b>: يُحفظ باسم الفيديو، مثل <code>film.ar.srt</code>، فيحمّله المشغّل إن وضعته بجانب الفيديو.",
+          "أو اضغط <b>«دمج الترجمة داخل الفيديو»</b>: نسخة MKV فيها الترجمة والنص الأصلي، وتظهر الترجمة فيها وحدها. الدمج سريع ولا يغيّر جودة الصورة والصوت."
+        ], [
+          "<b>«ترجمة بلغتين»</b>: الترجمة وتحتها الجملة الأصلية بخط مائل، مفيدة لتعلّم اللغة.",
+          "السطور مقطّعة لقراءة مريحة: سطران على الأكثر، وعلامات الترقيم العربية في مكانها الصحيح في VLC والتلفزيونات.",
+          "إن كان بجانب الفيديو ملفّا ترجمة (الأصلي والعربي) فقد يعرض VLC الأصلي: اختر العربية من قائمة <b>Subtitle</b>، أو استعمل النسخة المدموجة."
+        ], ["إن سقطت سطور من جواب الذكاء الاصطناعي ينبّهك البرنامج على الجزء، فأعد ترجمته."]],
         ["library", "المكتبة والبحث", "كل محاضراتك في مكان واحد.", "", [
           "اضغط <b>«المكتبة»</b> أعلى البرنامج لترى كل المحاضرات المفرّغة.",
           "اكتب في خانة البحث أي كلمة: تظهر المواضع من كل المحاضرات، واضغط النتيجة لتنتقل إلى اللحظة نفسها.",
@@ -201,7 +225,7 @@
           "After corrections a “You corrected the text…” bar appears: click <b>“Update files”</b> so the program updates the Word and text files."
         ], [], ["If you edited the Word file yourself in Word, the program never writes over it, to keep your changes."]],
         ["organize", "Organizing the Word file with AI", "Splits the lecture into titled sections without changing a word of the text.", "organize", [
-          "Open the <b>“Organize Word file”</b> tab and choose the options: number of sections and language of the titles, plus a note if you like.",
+          "Open the <b>“Organize Word file”</b> tab, choose <b>“Manual (copy and paste)”</b> at its top, then the options: number of sections and language of the titles, plus a note if you like.",
           "Click <b>“Copy prompt”</b>.",
           "Open a <b>new chat</b> in Gemini, ChatGPT or any AI, paste the prompt and send it.",
           "Copy the AI's answer <b>with the copy button above the answer</b> (don't select it with the mouse) and paste it into the third box.",
@@ -212,7 +236,7 @@
           "If the titles come out in another language than the lecture's, set “Heading language” yourself and copy the prompt again."
         ], []],
         ["translate", "Translation", "Translating the lecture into 9 languages with AI, keeping its sections.", "translate", [
-          "Open the <b>“Translate”</b> tab and choose the language in <b>“Translate into”</b>.",
+          "Open the <b>“Translate”</b> tab, choose <b>“Manual (copy and paste)”</b> at its top, then the language in <b>“Translate into”</b>.",
           "The lecture is split into parts (about a thousand words each) because free AI chats cut long answers short.",
           "For each part: click <b>“Copy prompt”</b>, paste it into a <b>new chat</b>, then copy the whole answer with the copy button and paste it into the part's box.",
           "Every part you paste is saved automatically, so you can finish later. <b>“Clear”</b> empties a part if you want to redo it.",
@@ -222,6 +246,28 @@
           "In “Extra note” you can write how names should be spelled, for example: “write: cathedral, Lugdunum”.",
           "Use the strongest model of the AI (such as Pro or Thinking) for a more accurate translation."
         ], ["If a part shows a warning (wrong language, much shorter than the original, or a missing section title), ask the AI to translate it again."]],
+        ["ai", "Organize and translate in one click", "Instead of copying and pasting, the program sends the text to the AI with your own key and gets the answer back by itself.", "ai", [
+          "Open ⚙ → <b>“AI”</b> and choose <b>Gemini</b>, <b>ChatGPT</b> or <b>Claude</b>.",
+          "Click <b>“Get a key”</b>: the provider's page opens. For Gemini, sign in with a Google account, then <b>Get API key</b> → <b>Create API key</b>, and copy the key.",
+          "Paste the key and click <b>“Check and save”</b>. The program checks it and picks the fastest model working right now (up to half a minute).",
+          "In “Organize Word file” or “Translate”, choose <b>“Automatic with Gemini”</b> at the top, then click <b>“Organize automatically”</b> or <b>“Translate all parts”</b>. The button shows the time spent; click it to stop. The program remembers your choice.",
+          "Checking stays the same: the list of sections, the translation warnings, then creating the Word file."
+        ], [
+          "<b>Gemini is free</b>: a Google account is enough. The free plan has a daily request limit, and Google may use the text sent to improve its services. Organizing takes about a minute, and each translated part about half a minute.",
+          "<b>ChatGPT and Claude need paid credit</b> in the provider's developer account; a ChatGPT Plus or Claude Pro subscription does not include it.",
+          "Only the lecture's text is sent; the recording never leaves your computer. The key is kept in the Windows Credential Manager."
+        ], ["If a model doesn't answer or is busy, the program switches to another one by itself. You can also choose the model in the “AI” window."]],
+        ["films", "Film and video subtitles", "Subtitles timed line by line, to put next to the video or inside it.", "clip:film", [
+          "Transcribe the video as usual. For a film in English there is no need for “English text timed for video”.",
+          "Open the <b>“Translate”</b> tab and choose <b>“Video subtitles (SRT)”</b> (picked by itself for video files), then the language under “Translate into”.",
+          "Translate the parts automatically with Gemini, or by hand with copy and paste. Each line is translated and keeps its time.",
+          "Click <b>“Create the subtitle file (SRT)”</b>: it is named after the video, like <code>film.ar.srt</code>, so the player loads it when it sits next to the video.",
+          "Or click <b>“Put the subtitles inside the video”</b>: an MKV copy with the translation and the original text, where the subtitles show by themselves. It is fast and keeps the picture and sound as they are."
+        ], [
+          "<b>“Two languages”</b>: the original sentence in italics under the translation, useful for learning a language.",
+          "Lines are cut to be easy to read: two lines at most, and Arabic punctuation in the right place in VLC and on TVs.",
+          "If two subtitle files sit next to the video (the original and the translation), VLC may show the original: pick the translation in the <b>Subtitle</b> menu, or use the copy with the subtitles inside."
+        ], ["If the AI's answer leaves lines out, the program flags that part: translate it again."]],
         ["library", "Library and search", "All your lectures in one place.", "", [
           "Click <b>“Library”</b> at the top to see every transcribed lecture.",
           "Type any word in the search box: matches from all lectures appear, and clicking one takes you to that moment.",
@@ -287,7 +333,7 @@
           "Après correction, une barre « Vous avez corrigé le texte… » apparaît : cliquez sur <b>« Mettre à jour les fichiers »</b> pour que le programme mette à jour le Word et le texte."
         ], [], ["Si vous avez modifié vous-même le fichier dans Word, le programme ne l'écrase jamais, pour garder vos modifications."]],
         ["organize", "Organiser le Word avec l'IA", "Découpe le cours en sections titrées sans changer un mot du texte.", "organize", [
-          "Ouvrez l'onglet <b>« Organiser le Word »</b> et choisissez les options : nombre de sections et langue des titres, plus une remarque si vous voulez.",
+          "Ouvrez l'onglet <b>« Organiser le Word »</b>, choisissez <b>« Manuel (copier-coller) »</b> en haut, puis les options : nombre de sections et langue des titres, plus une remarque si vous voulez.",
           "Cliquez sur <b>« Copier l'invite »</b>.",
           "Ouvrez une <b>nouvelle conversation</b> dans Gemini, ChatGPT ou une autre IA, collez l'invite et envoyez-la.",
           "Copiez la réponse <b>avec le bouton copier au-dessus de la réponse</b> (sans la sélectionner à la souris) et collez-la dans la troisième case.",
@@ -298,7 +344,7 @@
           "Si les titres sortent dans une autre langue que celle du cours, choisissez vous-même la « Langue des titres » et recopiez l'invite."
         ], []],
         ["translate", "Traduction", "Traduire le cours dans 9 langues avec l'IA, en gardant ses sections.", "translate", [
-          "Ouvrez l'onglet <b>« Traduire »</b> et choisissez la langue dans <b>« Traduire en »</b>.",
+          "Ouvrez l'onglet <b>« Traduire »</b>, choisissez <b>« Manuel (copier-coller) »</b> en haut, puis la langue dans <b>« Traduire en »</b>.",
           "Le cours est découpé en parties (environ mille mots chacune), car les IA gratuites coupent les longues réponses.",
           "Pour chaque partie : cliquez sur <b>« Copier l'invite »</b>, collez-la dans une <b>nouvelle conversation</b>, puis copiez toute la réponse avec le bouton copier et collez-la dans la case de la partie.",
           "Chaque partie collée est enregistrée automatiquement : vous pouvez finir plus tard. <b>« Effacer »</b> vide une partie pour la refaire.",
@@ -308,6 +354,28 @@
           "Dans « Remarque », vous pouvez préciser l'orthographe voulue des noms, par exemple : « écris : Lugdunum, Fourvière ».",
           "Utilisez le modèle le plus puissant de l'IA (comme Pro ou Thinking) pour une traduction plus précise."
         ], ["Si une partie affiche une alerte (mauvaise langue, beaucoup plus courte que l'original, ou titre de section manquant), demandez à l'IA de la retraduire."]],
+        ["ai", "Organiser et traduire en un clic", "Au lieu de copier-coller, le programme envoie le texte à l'IA avec votre propre clé et récupère la réponse tout seul.", "ai", [
+          "Ouvrez ⚙ → <b>« IA »</b> et choisissez <b>Gemini</b>, <b>ChatGPT</b> ou <b>Claude</b>.",
+          "Cliquez sur <b>« Obtenir une clé »</b> : la page du fournisseur s'ouvre. Pour Gemini, connectez-vous avec un compte Google, puis <b>Get API key</b> → <b>Create API key</b>, et copiez la clé.",
+          "Collez la clé et cliquez sur <b>« Vérifier et enregistrer »</b>. Le programme la vérifie et choisit le modèle le plus rapide du moment (jusqu'à une demi-minute).",
+          "Dans « Organiser le Word » ou « Traduire », choisissez <b>« Automatique avec Gemini »</b> en haut, puis cliquez sur <b>« Organiser automatiquement »</b> ou <b>« Traduire toutes les parties »</b>. Le bouton affiche le temps écoulé ; cliquez dessus pour arrêter. Le programme garde votre choix.",
+          "La vérification ne change pas : la liste des sections, les alertes de traduction, puis la création du Word."
+        ], [
+          "<b>Gemini est gratuit</b> : un compte Google suffit. Le forfait gratuit a une limite de requêtes par jour, et Google peut utiliser les textes envoyés pour améliorer ses services. L'organisation prend environ une minute, et chaque partie traduite environ une demi-minute.",
+          "<b>ChatGPT et Claude nécessitent un crédit payant</b> sur le compte développeur du fournisseur ; l'abonnement ChatGPT Plus ou Claude Pro ne l'inclut pas.",
+          "Seul le texte du cours est envoyé ; l'enregistrement ne quitte jamais votre ordinateur. La clé est gardée dans le Gestionnaire d'identification de Windows."
+        ], ["Si un modèle ne répond pas ou est très sollicité, le programme passe tout seul à un autre. Vous pouvez aussi choisir le modèle dans la fenêtre « IA »."]],
+        ["films", "Sous-titres de films et de vidéos", "Des sous-titres minutés ligne par ligne, à placer à côté de la vidéo ou à intégrer dedans.", "clip:film", [
+          "Transcrivez la vidéo comme d'habitude. Pour un film en anglais, l'option « Texte anglais minuté pour la vidéo » est inutile.",
+          "Ouvrez l'onglet <b>« Traduire »</b> et choisissez <b>« Sous-titres vidéo (SRT) »</b> (choisi tout seul pour les vidéos), puis la langue dans « Traduire en ».",
+          "Traduisez les parties automatiquement avec Gemini, ou à la main par copier-coller. Chaque ligne est traduite et garde son minutage.",
+          "Cliquez sur <b>« Créer le fichier de sous-titres (SRT) »</b> : il porte le nom de la vidéo, comme <code>film.fr.srt</code>, et le lecteur le charge s'il est à côté de la vidéo.",
+          "Ou cliquez sur <b>« Intégrer les sous-titres dans la vidéo »</b> : une copie MKV avec la traduction et le texte original, où les sous-titres s'affichent tout seuls. C'est rapide et l'image et le son restent intacts."
+        ], [
+          "<b>« Deux langues »</b> : la phrase originale en italique sous la traduction, utile pour apprendre une langue.",
+          "Les lignes sont découpées pour une lecture confortable : deux lignes au plus, et la ponctuation arabe à la bonne place dans VLC et sur les téléviseurs.",
+          "Si deux fichiers de sous-titres sont à côté de la vidéo (l'original et la traduction), VLC peut afficher l'original : choisissez la traduction dans le menu <b>Sous-titres</b>, ou utilisez la copie intégrée."
+        ], ["Si la réponse de l'IA omet des lignes, le programme signale la partie : retraduisez-la."]],
         ["library", "Bibliothèque et recherche", "Tous vos cours au même endroit.", "", [
           "Cliquez sur <b>« Bibliothèque »</b> en haut pour voir tous les cours transcrits.",
           "Tapez un mot dans la recherche : les passages de tous les cours s'affichent, et un clic vous amène au moment précis.",
@@ -338,7 +406,7 @@
     }
   };
 
-  var PANELS = ["organize", "translate", "report", "settings"];  // one panel of the window, shown narrower
+  var PANELS = ["organize", "translate", "report", "settings", "ai"];  // one panel of the window, shown narrower
 
   function pickLang() {
     var m = /[?&]lang=(ar|en|fr)/.exec(location.search);
@@ -365,7 +433,9 @@
     document.getElementById("guide").innerHTML = g.sections.map(function (s, i) {
       return '<section id="' + s[0] + '"><h2><span class="n">' + (i + 1) + "</span>" + s[1] + "</h2>" +
         (s[2] ? '<p class="intro">' + s[2] + "</p>" : "") +
-        (s[3] ? '<div class="shot' + (PANELS.indexOf(s[3]) >= 0 ? " panel" : "") + '"><img src="img/shot-' + lang + "-" + s[3] +
+        (/^clip:/.test(s[3]) ? '<div class="shot"><video src="img/new-' + s[3].slice(5) + "-" + lang + '.mp4" poster="img/new-' + s[3].slice(5) + "-" + lang +
+          '.jpg" muted loop playsinline autoplay preload="metadata" aria-label="' + s[1] + '"></video></div>' :
+        s[3] ? '<div class="shot' + (PANELS.indexOf(s[3]) >= 0 ? " panel" : "") + '"><img src="img/shot-' + lang + "-" + s[3] +
           '.webp" alt="' + s[1] + '" loading="lazy"></div>' : "") +
         (s[4].length ? "<" + (s[0] === "tips" || s[0] === "help" || s[0] === "library" || s[0] === "settings" ? "ul" : "ol") + ">" +
           s[4].map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</" + (s[0] === "tips" || s[0] === "help" || s[0] === "library" || s[0] === "settings" ? "ul" : "ol") + ">" : "") +
