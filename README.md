@@ -1,78 +1,42 @@
-<div align="center">
+الذكاء الاصطناعي بمفتاحك: اربط مفتاح Gemini المجاني (أو ChatGPT / Claude بمفتاح فيه رصيد مدفوع) من ⚙ ← «الذكاء الاصطناعي»، فيرتّب البرنامج المحاضرة ويترجمها بضغطة واحدة بلا نسخ ولصق. الطريقة اليدوية باقية كما هي.
 
-# ناسخ · Nasikh
+ترجمة الأفلام: في تبويب «ترجمة» اختر «ترجمة فيديو (SRT)»: يُترجم كل سطر ويبقى في توقيته، مع خيار ترجمة بلغتين، وزر «دمج الترجمة داخل الفيديو» يصنع نسخة MKV تظهر فيها الترجمة وحدها في المشغّل.
 
-**حوّل تسجيلات محاضراتك إلى نص مكتوب، مجاناً وعلى جهازك**<br>
-**Turn your lecture recordings into written text — free, on your own computer**<br>
-**Transformez vos enregistrements de cours en texte — gratuitement, sur votre ordinateur**
+سطور ترجمة الفيديو صارت مريحة للقراءة: سطران على الأكثر، وعلامات الترقيم العربية في مكانها الصحيح في VLC والتلفزيونات
 
-### [⬇ تنزيل · Download · Télécharger](https://github.com/nasikh-app/nasikh/releases/latest)
+عند انشغال خدمة الذكاء الاصطناعي أو انتهاء الحصة المجانية يتوقف البرنامج ويذكر السبب بدل الانتظار
 
-🌐 **[الموقع · Website · Site](https://nasikh-app.github.io/nasikh/)**
+الترجمة تتبع أقسام المحاضرة حتى لو رتّبتها بعد الترجمة
 
-Windows 10 / 11 (64-bit)
+نافذة «ما الجديد» بمقاطع قصيرة، وتجدها في ⚙ ← «ما الجديد»
 
-</div>
+إصلاحات: فتح نسختين من البرنامج كان يضيّع بعض الإعدادات، وسجل الأخطاء لم يكن يُحفظ
 
----
+AI with your own key: link a free Gemini key (or ChatGPT / Claude with a key that has paid credit) under ⚙ → "AI", and the program organizes and translates a lecture in one click, with no copying and pasting. The manual way is still there.
 
-<div dir="rtl">
+Film subtitles: in the "Translate" tab choose "Video subtitles (SRT)": each line is translated and keeps its time, with a two-language option, and "Put the subtitles inside the video" makes an MKV copy whose subtitles show by themselves in the player.
 
-## العربية
+Video subtitles are now easy to read: two lines at most, and Arabic punctuation in the right place in VLC and on TVs
 
-**ناسخ** برنامج مجاني يفرّغ تسجيلات المحاضرات (صوت أو فيديو) إلى نص مكتوب، ويعمل على جهازك دون رفع تسجيلاتك إلى أي مكان.
+When the AI service is busy or the free quota is used up, the program stops and says why instead of waiting
 
-- **تفريغ دقيق** لأكثر من 90 لغة، منها العربية والفرنسية والإنجليزية.
-- **ملفات Word** جاهزة، ونص عادي، ونص بتوقيت للفيديو (SRT).
-- **ترتيب المحاضرة في أقسام بعناوين** بمساعدة أي منصة ذكاء اصطناعي، دون تغيير كلمة من النص.
-- **ترجمة المحاضرة** إلى 9 لغات مع الحفاظ على أقسامها.
-- **محرر** تستمع فيه إلى التسجيل وتصحّح النص كلمة بكلمة.
-- **مكتبة** لكل محاضراتك مع بحث في نصوصها.
-- يعمل **دون إنترنت** بعد التجهيز الأول، ويستعمل كرت الشاشة NVIDIA إن وُجد لتفريغ أسرع.
+The translation follows the lecture's sections even when you organize it after translating
 
-**التثبيت:** نزّل `Nasikh-Setup-….exe` من [صفحة الإصدارات](https://github.com/nasikh-app/nasikh/releases/latest) وشغّله. إن ظهرت رسالة «Windows protected your PC» فاضغط **More info** ثم **Run anyway** (البرنامج جديد وغير موقّع رقمياً بعد). عند أول تشغيل ينزّل البرنامج نموذج التفريغ (1.5 غ.ب) مرة واحدة فقط.
+A "What's new" window with short clips, also under ⚙ → "What's new"
 
-**الخصوصية:** تسجيلاتك ونصوصك تبقى على جهازك. لا حسابات ولا إعلانات ولا مدفوعات.
+Fixes: opening the program twice could lose some settings, and the error log was not being saved
 
-</div>
+L'IA avec votre propre clé : reliez une clé Gemini gratuite (ou ChatGPT / Claude avec une clé créditée) dans ⚙ → « IA », et le programme organise et traduit un cours en un clic, sans copier-coller. La méthode manuelle reste disponible.
 
-## English
+Sous-titres de films : dans l'onglet « Traduire », choisissez « Sous-titres vidéo (SRT) » : chaque ligne est traduite et garde son minutage, avec une option deux langues, et « Intégrer les sous-titres dans la vidéo » crée une copie MKV dont les sous-titres s'affichent tout seuls dans le lecteur.
 
-**Nasikh** is a free program that transcribes lecture recordings (audio or video) into written text, entirely on your computer — your recordings are never uploaded.
+Des sous-titres plus lisibles : deux lignes au plus, et la ponctuation arabe à la bonne place dans VLC et sur les téléviseurs
 
-- **Accurate transcription** in 90+ languages, including Arabic, French and English.
-- Ready-made **Word files**, plain text, and timed text for video (SRT).
-- **Organize a lecture into titled sections** with any AI chat, without changing a word of the text.
-- **Translate a lecture** into 9 languages, keeping its sections.
-- An **editor** to listen to the recording and correct the text word by word.
-- A **library** of all your lectures, with full-text search.
-- Works **offline** after the first setup, and uses an NVIDIA graphics card when there is one.
+Quand le service d'IA est saturé ou que le quota gratuit est épuisé, le programme s'arrête et explique pourquoi au lieu d'attendre
 
-**Install:** download `Nasikh-Setup-….exe` from the [releases page](https://github.com/nasikh-app/nasikh/releases/latest) and run it. If you see "Windows protected your PC", click **More info**, then **Run anyway** (the program is new and not yet code-signed). On first start it downloads the transcription model (1.5 GB) once.
+La traduction suit les sections du cours même si vous l'organisez après l'avoir traduit
 
-**Privacy:** your recordings and texts stay on your computer. No accounts, no ads, no payments.
+Une fenêtre « Nouveautés » avec de courtes vidéos, aussi dans ⚙ → « Nouveautés »
 
-## Français
+Corrections : ouvrir le programme deux fois pouvait faire perdre des réglages, et le journal des erreurs n'était pas enregistré
 
-**Nasikh** est un programme gratuit qui transcrit vos enregistrements de cours (audio ou vidéo) en texte, entièrement sur votre ordinateur — vos enregistrements ne sont jamais envoyés ailleurs.
-
-- **Transcription précise** dans plus de 90 langues, dont l'arabe, le français et l'anglais.
-- Fichiers **Word** prêts, texte brut et texte minuté pour la vidéo (SRT).
-- **Organisation du cours en sections titrées** avec n'importe quelle IA, sans changer un mot du texte.
-- **Traduction du cours** dans 9 langues, en gardant ses sections.
-- Un **éditeur** pour écouter l'enregistrement et corriger le texte mot par mot.
-- Une **bibliothèque** de tous vos cours, avec recherche dans les textes.
-- Fonctionne **hors ligne** après la première préparation, et utilise une carte graphique NVIDIA s'il y en a une.
-
-**Installation :** téléchargez `Nasikh-Setup-….exe` depuis la [page des versions](https://github.com/nasikh-app/nasikh/releases/latest) et lancez-le. Si « Windows a protégé votre ordinateur » s'affiche, cliquez sur **Informations complémentaires** puis **Exécuter quand même** (le programme est nouveau et pas encore signé). Au premier lancement, il télécharge une seule fois le modèle de transcription (1,5 Go).
-
-**Confidentialité :** vos enregistrements et vos textes restent sur votre ordinateur. Ni compte, ni publicité, ni paiement.
-
----
-
-<div align="center">
-
-فكرة وتطوير · Created by · Créé par **Rawnd Marzina**<br>
-[nasikh.app@gmail.com](mailto:nasikh.app@gmail.com)
-
-</div>
